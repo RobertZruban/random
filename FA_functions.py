@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
 
 
 def Cost_of_debt():
@@ -15,16 +11,12 @@ def Cost_of_debt():
     return Cost_of_Debt2
 
 
-# In[ ]:
-
-
 def Cost_of_equity(risk_free_rate, beta):
     market_return = 0.0851
     costofequity = risk_free_rate+(beta*(market_return-risk_free_rate))
     return round(costofequity*100,2)
 
 
-# In[ ]:
 
 
 def WACC(risk_free_rate, beta):
@@ -53,7 +45,7 @@ def WACC(risk_free_rate, beta):
     return wacc
 
 
-# In[ ]:
+
 
 
 def Terminal_Value(years):
@@ -69,8 +61,6 @@ def Terminal_Value(years):
         total.append(Ratio)
     return np.cumsum(total)[-1]
 
-
-# In[ ]:
 
 
 def Fair_Value(years, years_growth_rate_3, growth_rate_3,  years_growth_rate_2,growth_rate_2, discount_rate):
@@ -101,16 +91,12 @@ def Fair_Value(years, years_growth_rate_3, growth_rate_3,  years_growth_rate_2,g
     return intrinsic_value
 
 
-# In[ ]:
-
 
 def Cash_flow_return():
     mean = cash_flow_statement_annually.loc['freeCashFlow'][0:5]
     mean_growth = ((mean[0]-mean[4])/mean[4])/len(mean)
     return mean_growth
 
-
-# In[ ]:
 
 
 
